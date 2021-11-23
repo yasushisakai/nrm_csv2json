@@ -3,7 +3,7 @@ use std::collections::HashMap;
 
 pub type VoteTarget = String;
 
-#[derive(Debug, Default, Serialize)]
+#[derive(Default, Serialize)]
 pub struct Topic {
     #[serde(rename = "topicId")]
     pub topic_id: String,
@@ -23,7 +23,7 @@ impl Topic {
     }
 }
 
-#[derive(Debug, Default, Serialize)]
+#[derive(Default, Serialize)]
 pub struct Vote {
     #[serde(rename = "voterId")]
     pub voter_id: String,
@@ -43,5 +43,3 @@ impl Vote {
         self.voter_points.insert(target.to_owned(), num);
     }
 }
-
-
