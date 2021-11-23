@@ -1,0 +1,78 @@
+use std::collections::HashMap;
+use std::fs;
+use std::io::prelude::*;
+use std::path::Path;
+
+#[derive(Debug, Default)]
+struct Topic{
+    topic_id: String,
+    vote: Vec<Vote>
+}
+
+impl Topic {
+    fn new(topic_id: &str) ->Self {
+        Self{
+        topic_id: topic_id.to_string(),
+        ..Default::default()
+        }
+    }
+
+    fn push_vote(&mut self, vote: Vote) {
+        self.vote.push(vote);
+    }
+}
+
+type VoteTarget = String;
+
+#[derive(Debug, Default)]
+struct Vote{
+    voter_id:String,
+    voter_points: HashMap<VoteTarget,usize>
+}
+
+impl Vote {
+    fn new(voter_id: &str) -> Self {
+        Self{
+        voter_id: voter_id.to_string(),
+        ..Default::default()
+        }
+    }
+
+    fn add(&mut self, target: &str, num: usize) {
+        self.voter_points.insert(target.to_owned(), num);
+    }
+}
+
+
+fn main() {
+   let file = fs::File::open("NRM Edges - Liquid.csv").unwrap();
+    let mut lines = std::io::BufReader::new(file).lines();
+
+    println!("{:?}", lines.next()); // discard header
+
+    let mut topics = Vec::new();
+
+    // init 
+    let line = lines.next().unwrap().unwrap(); 
+    let split: Vec<String> = line.split(',').map(|cs|cs.to_string()).collect();
+    let mut cur_topic = split[0];
+    let topic = Topic::new(&cur_topic);
+    let mut vote = Vote::new(&split[2]);
+
+
+
+        for line in lines.flatten() {
+        let split: Vec<String> = line.split(',').map(|s|s.to_string()).collect();
+
+        if cur_topic != split[0] {
+            // new topic!
+            topics.push(topic);
+            topic = Topic::new(&split[0]);
+            cur_topic = split[0].to_string();
+            vote = Vote::new(&split[2]);
+        } 
+
+
+
+    }
+}

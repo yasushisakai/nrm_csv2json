@@ -1,0 +1,203 @@
+[
+  {
+    "topicId": "428d0",
+    "vote": [
+      {
+        "voterId": "089b6",
+        "vote": {
+          "a6d73": 1
+        }
+      },
+      {
+        "voterId": "22ed4",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "2be4d",
+        "vote": {
+          "a6d73": 1
+        }
+      },
+      {
+        "voterId": "6e1bb",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "87dad",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "a4b95",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "a6d73",
+        "vote": {
+          "ec61d": 1
+        }
+      },
+      {
+        "voterId": "bf6ec",
+        "vote": {
+          "a6d73": 1
+        }
+      },
+      {
+        "voterId": "ec61d",
+        "vote": {
+          "87dad": 1
+        }
+      },
+      {
+        "voterId": "f4624",
+        "vote": {
+          "a4b95": 1
+        }
+      }
+    ]
+  },
+  {
+    "topicId": "40479",
+    "vote": [
+      {
+        "voterId": "089b6",
+        "vote": {
+          "a6d73": 1
+        }
+      },
+      {
+        "voterId": "22ed4",
+        "vote": {
+          "a6d73": 1
+        }
+      },
+      {
+        "voterId": "2be4d",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "6e1bb",
+        "vote": {
+          "a4b95": 1
+        }
+      },
+      {
+        "voterId": "87dad",
+        "vote": {
+          "a4b95": 1
+        }
+      },
+      {
+        "voterId": "a4b95",
+        "vote": {
+          "ec61d": 1
+        }
+      },
+      {
+        "voterId": "a6d73",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "bf6ec",
+        "vote": {
+          "87dad": 1
+        }
+      },
+      {
+        "voterId": "ec61d",
+        "vote": {
+          "87dad": 1
+        }
+      },
+      {
+        "voterId": "f4624",
+        "vote": {
+          "089b6": 1
+        }
+      }
+    ]
+  },
+  {
+    "topicId": "0c8e4",
+    "vote": [
+      {
+        "voterId": "089b6",
+        "vote": {
+          "ec61d": 1
+        }
+      },
+      {
+        "voterId": "22ed4",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "2be4d",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "6e1bb",
+        "vote": {
+          "a4b95": 1
+        }
+      },
+      {
+        "voterId": "87dad",
+        "vote": {
+          "a4b95": 1
+        }
+      },
+      {
+        "voterId": "a4b95",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "a6d73",
+        "vote": {
+          "87dad": 1
+        }
+      },
+      {
+        "voterId": "bf6ec",
+        "vote": {
+          "87dad": 1
+        }
+      },
+      {
+        "voterId": "ec61d",
+        "vote": {
+          "87dad": 1
+        }
+      },
+      {
+        "voterId": "f4624",
+        "vote": {
+          "089b6": 1
+        }
+      },
+      {
+        "voterId": "089b6",
+        "vote": {
+          "b2c4": 1
+        }
+      }
+    ]
+  }
+]
