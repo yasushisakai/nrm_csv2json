@@ -7,7 +7,9 @@ use std::io::prelude::*;
 fn main() {
     let agg_rules = vec!["liquid", "borda", "indirect", "majority"];
 
+
     for rule in agg_rules {
+        let mut total = 0;
         println!("reading {}", rule);
         let csv_file_name = format!("in/NRM Edges - {}.csv", rule);
         let file = fs::File::open(csv_file_name).unwrap();
@@ -23,12 +25,14 @@ fn main() {
         let (topic_id, _, source, target, num) = unfold_line(&line);
         let mut topic = Topic::new(topic_id);
         let mut vote = Vote::new(source);
+        total += num;
         vote.add(target, num);
 
         // repeat
         for line in lines.flatten() {
             let (topic_id, result_id, source, target, num) = unfold_line(&line);
             if topic.topic_id != topic_id {
+                topic.push_vote(vote);
                 topics.push(topic);
                 topic = Topic::new(topic_id);
                 results.push(result_id.to_string());
@@ -38,6 +42,7 @@ fn main() {
                 vote = Vote::new(source);
             }
             vote.add(target, num);
+            total += num;
         }
 
         //clean
@@ -51,6 +56,8 @@ fn main() {
         let buffer = File::create(json_file_results).unwrap();
         let _ = serde_json::to_writer_pretty(buffer, &results);
         println!("done.");
+        println!("total: {}", total);
+
     }
 }
 
